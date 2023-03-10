@@ -1,0 +1,84 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  padding-top: 10vh;
+  background: rgb(236, 234, 250);
+}
+
+.image-section p {
+  margin-left: 10vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(67, 67, 67);
+  margin-bottom: 15px;
+}
+
+.image-section img {
+  width: 50%;
+  align-self: center;
+}
+
+.login-section {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(42, 42, 42);
+}
+
+.login-section>p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+.login-section p {
+  color: white;
+}
+
+.login-form {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.login-form input {
+  width: 16vw;
+  height: 4vh;
+  border-radius: 6px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+  margin-bottom: 14px;
+  margin-top: 8px;
+}
+
+.login-form button {
+  width: 16vw;
+  height: 4vh;
+  border-radius: 6px;
+  border: none;
+  margin-top: 22px;
+  margin-bottom: 15px;
+  background: rgb(135, 36, 168);
+  background: linear-gradient(90deg, rgba(135, 36, 168, 1) 0%, rgb(45, 27, 104) 100%);
+  color: white;
+  font-family: Montserrat;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.forgot-pwd {
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
