@@ -26,7 +26,7 @@ const Dashboard = () => {
       }
     };
     fetchData();
-  }, [navigate]);
+  }, [navigate, contentTypes, collectionNames]);
 
   return (
     collectionNames.length === 0 ? <div>Loading...</div> :

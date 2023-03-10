@@ -27,7 +27,7 @@ const CollectionPage = () => {
       }
     };
     fetchData();
-  },[collectionId, navigate]);
+  },[collectionId, navigate, collectionNames, collectionFields]);
   return (
     collectionNames.length === 0 ? <div>Loading...</div> :
       collectionFields.length === 0 ? <div>Loading...</div> :
@@ -36,7 +36,7 @@ const CollectionPage = () => {
             <SideNavBar collectionNames={collectionNames} />
             <div className='collections-page-main'>
               <Header headerText={collectionNames[collectionId-1]?.name}/>
-              <CollectionEntriesMain collectionFields={collectionFields}/>
+              <CollectionEntriesMain collectionFields={collectionFields} contentName={collectionNames[collectionId-1]?.name}/>
             </div>
           </div>)
   );

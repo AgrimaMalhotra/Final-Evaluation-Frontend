@@ -9,7 +9,7 @@ import propTypes from 'prop-types';
 
 const ContentTypeMain = ({contentTypes}) => {
   const [isClicked, setIsClicked] = React.useState(false);
-  const [modalOptions, setModalOptions] = React.useState({});
+
   const [selectedContent, setSelectedContent] = React.useState({
     id: '',
     name: '',
@@ -17,19 +17,6 @@ const ContentTypeMain = ({contentTypes}) => {
     fields: {},
   });
 
-  const showNewContentModal = () => {
-    modalOptions.heading = 'Add New Content Type';
-    modalOptions.inputHeading = 'Name of the content type';
-    setModalOptions(modalOptions);
-    setIsClicked(true);
-  };
-  const showNewFieldModal = () => {
-    modalOptions.heading = 'Add New Field';
-    modalOptions.inputHeading = 'Name of the field';
-    modalOptions.typeHeading = 'Type of the field';
-    setModalOptions(modalOptions);
-    setIsClicked(true);
-  };
   return (
     <div className="content-types-main">
       <div className='content-types-column'>
@@ -37,7 +24,7 @@ const ContentTypeMain = ({contentTypes}) => {
           <p>{`${contentTypes.length} Types`} </p>
           <img src={searchIcon} />
         </div>
-        <button className='add-type-button' onClick={showNewContentModal}>+ New Type</button>
+        <button className='add-type-button' onClick={() =>setIsClicked(!isClicked)}>+ New Type</button>
         <div className='type-list' >
           {contentTypes.map((contentType) => (
             <div key={contentType.id} onClick={() => {setSelectedContent({id: contentType.id, name: contentType.name, fieldCount: Object.keys(contentType.fields).length, fields: contentType.fields});}}>
@@ -52,7 +39,7 @@ const ContentTypeMain = ({contentTypes}) => {
           <img src={editIcon} />
         </div>
         <p className='fields-count'>{`${selectedContent.fieldCount} types`}</p>
-        <button className='add-field-button' onClick={showNewFieldModal}>Add another field</button>
+        <button className='add-field-button' >Add another field</button>
         <div className='fields-list'>
           {selectedContent.fields && Object.keys(selectedContent.fields).map((key) => (
             <NewFieldBar key={key} fields={[key, selectedContent.fields[key]]} />
@@ -63,8 +50,6 @@ const ContentTypeMain = ({contentTypes}) => {
       {isClicked &&  (
         <CentreModal
           setIsOpen={setIsClicked}
-          modalOptions={modalOptions}
-          setModalOptions={setModalOptions}
         />
       )}
     </div>
