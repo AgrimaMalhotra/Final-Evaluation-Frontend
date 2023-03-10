@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import './SideNavBar.css';
 import searchIcon from '../../assets/icon-search-dark_2023-03-09/icon-search-dark.png';
 
@@ -8,7 +8,7 @@ const SideNavBar = () => {
       <div className='header'>
         <p>CMS+</p>
       </div>
-      <div className="collections">
+      <div className="collections-nav-bar">
         <div className="collections-header">
           <p>COLLECTION TYPES</p>
           <img src={searchIcon} />

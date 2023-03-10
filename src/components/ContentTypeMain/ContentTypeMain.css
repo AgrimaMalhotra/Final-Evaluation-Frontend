@@ -6,14 +6,14 @@
 
 .content-types-column {
   padding: 30px;
-  background-color: rgb(196, 194, 198);
+  background-color: rgb(206, 206, 222);
 }
 
 .column-header {
   width: 15vw;
   display: flex;
   justify-content: space-between;
-  color: #3B3B3B;
+  color:  #515050;
   margin-bottom: 20px
 }
 
@@ -29,12 +29,12 @@
 }
 
 .content-fields-column {
-  background-color: #DBD4DE;
+  background-color:rgb(225, 229, 242);
   width: 100%;
   padding: 30px;
   font-size: 1.8rem;
   font-weight: bolder;
-  color:#3B3B3B;
+  color: #515050;
 }
 
 .content-fields-heading {
@@ -55,7 +55,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 10px;
-  color: #3B3B3B;
+  color:  #515050;
   margin-bottom: 20px;
 }
 

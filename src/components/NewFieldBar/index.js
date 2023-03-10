@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import './NewFieldBar.css';
 import editIcon from '../../assets/user-edit-text-message-note_2023-03-09/user-edit-text-message-note.png';
 import deleteIcon from '../../assets/trash-delete-recycle-bin-bucket-waste_2023-03-09/trash-delete-recycle-bin-bucket-waste.png';

@@ -1,10 +1,11 @@
-.header{
-  background-color: rgb(255, 255, 255);
+.main-header{
+  background-color: white;
   display: flex;
   align-items: center;
-  height: 45px;
-  color: rgb(63, 62, 62);
-  font-size: 1.8rem;
+  height: 80px;
+  color:  #515050;
+  font-size: 1.5rem;
   font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-left: 30px;
 }
