@@ -1,0 +1,71 @@
+.sidebar {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 15%;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color:#7136FA;
+  height: 45px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+
+.collections {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(49, 44, 44);
+  padding-top: 30px;
+}
+
+.collections-header {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  color: whitesmoke;
+  margin-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.collections-list {
+  padding-left: 20px;
+  color: rgb(134, 134, 134);
+}
+
+ul{  padding-left: 20px;}
+.collections-list li {
+  margin-bottom: 18px;
+}
+
+.collections-list li:active{
+  background-color: #000;
+  color: white;
+  padding-left: 0;
+}
+.collections-list li:hover{
+  background-color: #000;
+  color: white;
+  padding-left: 0;
+}
+.content-builder {
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px;
+  font-weight: 600;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.content-builder:active, .content-builder:hover {
+  background-color: #000;
+    color: white;
+}
