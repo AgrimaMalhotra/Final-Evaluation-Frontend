@@ -1,0 +1,41 @@
+.new-field-bar {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  align-items: center;
+}
+
+.field-type-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 5%;
+  height: 100%;
+  background-color:rgba(0, 0, 255, 0.588);
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.field-name {
+  margin-left: 14px;
+  font-size: 1.1rem;
+  width: 36%;
+}
+
+.field-type-text{
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.429);
+  width: 50%;
+}
+
+.action-buttons {
+  display: flex;
+  width: 5%;
+  justify-content: space-between;
+}
