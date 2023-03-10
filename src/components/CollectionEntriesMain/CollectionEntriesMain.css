@@ -1,0 +1,46 @@
+.collection-entries {
+  padding: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(225, 229, 242);
+  height: 94vh;
+}
+
+.collection-entries-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.collection-entry-count {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color:  #515050;
+}
+
+.collection-add-entry{
+  color: #7136FA;
+}
+
+.entry-keys-heading {
+  display: flex;
+  width: 100%;
+  color:  #515050;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.key-1 {
+  width: 6.2%;
+}
+
+.key-2 {
+  width: 20.5%;
+}
+
+.key-3 {
+  width: 17.5%;
+}
+
+.key-4 {
+  width: 49%;
+}
