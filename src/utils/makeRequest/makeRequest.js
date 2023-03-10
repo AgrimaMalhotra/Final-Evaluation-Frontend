@@ -18,7 +18,7 @@ const makeRequest = async (
         authorization: `Bearer ${token}`,
       },
     };
-    const { data } = await axios(requestDetails);
+    const {data} = await axios(requestDetails);
     return data;
   } catch (error) {
     const errorStatus = error.response?.status;

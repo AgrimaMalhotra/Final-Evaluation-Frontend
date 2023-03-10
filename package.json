@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",

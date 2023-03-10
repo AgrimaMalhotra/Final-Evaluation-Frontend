@@ -26,21 +26,23 @@
   width: 100%;
   color:  #515050;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 35px;
+}
+
+.key-0 {
+  padding-right: 6.2%;
 }
 
 .key-1 {
-  width: 6.2%;
+  padding-right: 20.5%;
 }
 
 .key-2 {
-  width: 20.5%;
+  padding-right: 17.5%;
 }
 
 .key-3 {
-  width: 17.5%;
+  padding-right: 48%;
 }
 
-.key-4 {
-  width: 49%;
-}
+

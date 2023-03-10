@@ -5,10 +5,17 @@ import editIcon from '../../assets/user-pencil-write-ui-education_2023-03-09/use
 import NewTypeBar from '../NewTypeBar';
 import NewFieldBar from '../NewFieldBar';
 import CentreModal from '../CentreModal';
+import propTypes from 'prop-types';
 
-const ContentTypeMain = () => {
+const ContentTypeMain = ({contentTypes}) => {
   const [isClicked, setIsClicked] = React.useState(false);
   const [modalOptions, setModalOptions] = React.useState({});
+  const [selectedContent, setSelectedContent] = React.useState({
+    id: '',
+    name: '',
+    fieldCount: 0,
+    fields: {},
+  });
 
   const showNewContentModal = () => {
     modalOptions.heading = 'Add New Content Type';
@@ -27,24 +34,29 @@ const ContentTypeMain = () => {
     <div className="content-types-main">
       <div className='content-types-column'>
         <div className='column-header'>
-          <p>7 Types</p>
+          <p>{`${contentTypes.length} Types`} </p>
           <img src={searchIcon} />
         </div>
         <button className='add-type-button' onClick={showNewContentModal}>+ New Type</button>
         <div className='type-list' >
-          <NewTypeBar />
+          {contentTypes.map((contentType) => (
+            <div key={contentType.id} onClick={() => {setSelectedContent({id: contentType.id, name: contentType.name, fieldCount: Object.keys(contentType.fields).length, fields: contentType.fields});}}>
+              <NewTypeBar key={contentType.id} contentType={contentType} isActive={selectedContent.id === contentType.id}/>
+            </div>
+          ))}
         </div>
       </div>
-
       <div className='content-fields-column'>
         <div className='content-fields-heading'>
-          <p>Company_Profile</p>
+          <p>{selectedContent.name}</p>
           <img src={editIcon} />
         </div>
-        <p className='fields-count'>13 fields</p>
+        <p className='fields-count'>{`${selectedContent.fieldCount} types`}</p>
         <button className='add-field-button' onClick={showNewFieldModal}>Add another field</button>
         <div className='fields-list'>
-          <NewFieldBar />
+          {selectedContent.fields && Object.keys(selectedContent.fields).map((key) => (
+            <NewFieldBar key={key} fields={[key, selectedContent.fields[key]]} />
+          ))}
         </div>
       </div>
 
@@ -57,6 +69,10 @@ const ContentTypeMain = () => {
       )}
     </div>
   );
+};
+
+ContentTypeMain.propTypes = {
+  contentTypes: propTypes.array.isRequired,
 };
 
 export default ContentTypeMain;

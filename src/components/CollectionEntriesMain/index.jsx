@@ -1,29 +1,37 @@
 import * as React from 'react';
-import EntryBar from '../EntryBar';
+import {EntryBar,SideModal} from '..';
 import './CollectionEntriesMain.css';
-import SideModal from '../SideModal';
+import propTypes from 'prop-types';
 
-const CollectionEntriesMain = () => {
+const CollectionEntriesMain = ({collectionFields}) => {
   const [isClicked, setIsClicked] = React.useState(false);
   return (
     <div className="collection-entries">
       <div className='collection-entries-header'>
-        <p className='collection-entry-count'>13 Entries Found</p>
+        <p className='collection-entry-count'> {`${collectionFields.length} Entries Found`}</p>
         <p className='collection-add-entry' onClick={() => setIsClicked(true)}>Add a new entry</p>
       </div>
       <div className='collection-entries-list'>
         <div className='entry-keys-heading'>
-          <p className='key-1'>ID</p>
-          <p className='key-2'>Name</p>
-          <p className='key-3'>Website</p>
-          <p className='key-4'>Contact</p>
+          {Object.keys(collectionFields[0].entry).map((key,idx) => {
+            if (idx<=3)
+            {return (<p key={idx} className={`key-${idx}`}>{key}</p>);}
+          })}
           <p className='actions-allowed'>Actions</p>
         </div>
-        <EntryBar />
+        <div className='entry-values'>
+          {collectionFields.map((collectionField) => (
+            <EntryBar key={collectionField.id} entryValue={collectionField.entry} />
+          ))}
+        </div>
       </div>
       {isClicked && <SideModal setIsOpen={setIsClicked} />}
     </div>
   );
+};
+
+CollectionEntriesMain.propTypes = {
+  collectionFields: propTypes.array.isRequired,
 };
 
 export default CollectionEntriesMain;

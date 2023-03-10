@@ -4,23 +4,24 @@
   background-color: white;
   height: 50px;
   border-radius: 10px;
-  padding-left: 25px
+  padding-left: 25px;
+  margin:10px;
+}
+
+.column-0 {
+  padding-right: 5.5%;
 }
 
 .column-1 {
-  width: 6%;
+  padding-right: 21%;
 }
 
 .column-2 {
-  width: 21%;
+  padding-right: 18%;
 }
 
 .column-3 {
-  width: 18%;
-}
-
-.column-4 {
-  width: 49%;
+  padding-right: 49%;
 }
 
 .action-icons {

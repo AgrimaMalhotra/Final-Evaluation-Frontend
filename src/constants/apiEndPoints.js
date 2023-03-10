@@ -1,4 +1,4 @@
-export const BACKEND_URL = `http://${process.env.BACKEND_HOST}:${process.env.BACKEND_PORT}`;
+export const BACKEND_URL = 'http://localhost:4000';
 
 export const GET_COLLECTION_NAMES = () =>({
   method: 'GET',
@@ -60,7 +60,7 @@ export const DELETE_COLLECTION_ENTRY_BY_ID = (id) => ({
   url: `/collection/delete-entry/${id}`,
 });
 
-export const AUTH_BACKEND_URL = `http://${process.env.AUTH_BACKEND_HOST}:${process.env.AUTH_BACKEND_PORT}`;
+export const AUTH_BACKEND_URL = 'http://localhost:5000';
 
 export const REGISTER_USER = () => ({
   method: 'POST',
